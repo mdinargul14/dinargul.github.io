@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Обучение компьютерной грамотности</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: 0.6s; }
+    .fade-in.show { opacity: 1; transform: translateY(0); }
+    .whatsapp-btn { transition: transform 0.3s ease; }
+    .whatsapp-btn:hover { transform: scale(1.1); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Навигация -->
+  <nav class="bg-blue-600 text-white p-4 fixed w-full z-50 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Компьютерная грамотность</h1>
+      <div class="hidden md:flex gap-6 text-lg">
+        <a href="#services" class="hover:text-blue-200">Услуги</a>
+        <a href="#about" class="hover:text-blue-200">Обо мне</a>
+        <a href="#reviews" class="hover:text-blue-200">Отзывы</a>
+        <a href="#signup" class="hover:text-blue-200">Запись</a>
+      </div>
+      <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+    </div>
+  </nav>
+
+  <!-- Мобильное меню -->
+  <div id="mobileMenu" class="hidden bg-blue-700 text-white p-4 md:hidden">
+    <a href="#services" class="block py-2">Услуги</a>
+    <a href="#about" class="block py-2">Обо мне</a>
+    <a href="#reviews" class="block py-2">Отзывы</a>
+    <a href="#signup" class="block py-2">Запись</a>
+  </div>
+
+  <!-- Хедер -->
+  <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white text-center py-36 px-4">
+    <h1 class="text-5xl font-bold mb-4 fade-in">Обучение компьютерной грамотности</h1>
+    <p class="text-xl opacity-90 fade-in">Освойте компьютер с нуля или улучшите свои навыки</p>
+    <a href="#signup" class="mt-6 inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-2xl shadow-lg hover:bg-blue-100 transition fade-in">Записаться</a>
+  </header>
+
+  <!-- Услуги -->
+  <section id="services" class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">Услуги</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition fade-in">
+        <h3 class="text-xl font-semibold mb-3 text-blue-700">Базовая компьютерная грамотность</h3>
+        <ul class="list-disc ml-6 text-gray-700">
+          <li>Работа с операционной системой Windows: создание, копирование и перемещение файлов и папок</li>
+          <li>Настройка рабочего пространства: рабочий стол, панели инструментов, ярлыки</li>
+          <li>Пользование интернетом и электронной почтой</li>
+          <li>Базовое понимание программ и приложений</li>
+          <li>Эффективный поиск информации и работа с онлайн-сервисами</li>
+        </ul>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition fade-in">
+        <h3 class="text-xl font-semibold mb-3 text-blue-700">Microsoft Office: Word, Excel, PowerPoint</h3>
+        <ul class="list-disc ml-6 text-gray-700">
+          <li>Word: создание и форматирование документов, работа с таблицами и изображениями</li>
+          <li>Excel: построение таблиц, использование формул, создание графиков и диаграмм</li>
+          <li>PowerPoint: создание презентаций с анимацией, вставка медиа и оформление слайдов</li>
+        </ul>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition fade-in">
+        <h3 class="text-xl font-semibold mb-3 text-blue-700">Excel продвинутый уровень</h3>
+        <ul class="list-disc ml-6 text-gray-700">
+          <li>Сложные формулы и функции для анализа данных</li>
+          <li>Сводные таблицы и динамические графики</li>
+          <li>Макросы и автоматизация рутинных задач</li>
+          <li>Работа с большими массивами данных и фильтрация</li>
+        </ul>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition fade-in">
+        <h3 class="text-xl font-semibold mb-3 text-blue-700">Индивидуальные занятия</h3>
+        <ul class="list-disc ml-6 text-gray-700">
+          <li>Персональная программа под ваш уровень знаний и цели</li>
+          <li>Объяснение на понятных примерах и реальных задачах</li>
+          <li>Выбор удобного времени занятий</li>
+          <li>Поддержка после урока и помощь с домашними заданиями</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about" class="py-16 px-4 max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-10">Обо мне</h2>
+    <div class="bg-white p-10 rounded-3xl shadow-lg fade-in">
+      <p class="text-lg leading-relaxed mb-4">Я опытный преподаватель компьютерной грамотности. Работаю с учениками любого возраста, делаю обучение доступным и практичным. Использую наглядные примеры и персональный подход.</p>
+      <ul class="list-disc ml-6 text-lg">
+        <li>5+ лет опыта обучения</li>
+        <li>Индивидуальный подход</li>
+        <li>Обучение с нуля</li>
+        <li>Практические занятия на реальных примерах</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Отзывы -->
+  <section id="reviews" class="py-16 px-4 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-12">Отзывы учеников</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-3xl shadow-lg fade-in">
+        <p>«Очень доступные объяснения! Научилась работать в Excel за несколько занятий. Рекомендую!»</p>
+        <p class="mt-4 font-semibold text-blue-700">— Айжан</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg fade-in">
+        <p>«Хороший специалист. Терпеливо объясняет, помогает разбираться на практике. Теперь уверенно пользуюсь компьютером.»</p>
+        <p class="mt-4 font-semibold text-blue-700">— Ерлан</p>
+      </div>
+      <div class="bg-white p-8 rounded-3xl shadow-lg fade-in">
+        <p>«Прошла обучение Word и PowerPoint. Очень полезно! Занятия проходят легко и интересно.»</p>
+        <p class="mt-4 font-semibold text-blue-700">— Гульнара</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Форма записи -->
+  <section id="signup" class="py-16 px-4 max-w-xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8">Записаться на урок</h2>
+    <form action="mailto:m.dinargul.14@gmail.com" method="post" enctype="text/plain" class="bg-white p-8 rounded-3xl shadow-lg space-y-4 fade-in">
+      <input type="text" name="Имя" placeholder="Ваше имя" class="w-full p-4 border rounded-2xl" required />
+      <input type="text" name="Телефон" placeholder="Телефон" class="w-full p-4 border rounded-2xl" required />
+      <input type="email" name="Email" placeholder="Email" class="w-full p-4 border rounded-2xl" required />
+      <textarea name="Сообщение" placeholder="Ваш запрос" class="w-full p-4 border rounded-2xl h-28" required></textarea>
+      <button type="submit" class="w-full bg-blue-700 text-white py-4 rounded-2xl font-semibold hover:bg-blue-800 transition">Отправить</button>
+    </form>
+  </section>
+
+  <!-- Кнопка WhatsApp -->
+  <a href="https://wa.me/87753469348" target="_blank" class="whatsapp-btn fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-xl text-3xl">💬</a>
+
+  <!-- Футер -->
+  <footer class="bg-gray-900 text-white text-center py-6 mt-10 text-sm">
+    © 2025 Обучение компьютерной грамотности. Все права защищены.
+  </footer>
+
+  <script>
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
+
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.onclick = () => mobileMenu.classList.toggle('hidden');
+  </script>
+
+</body>
+</html>
